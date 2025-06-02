@@ -1,43 +1,6 @@
 # Task-5_wireshark
-Potocols
-
-1.DNS(Domain Name System)
-  I search for website like "thehackernews,com", "github.com", "youtube.com" , "blackbox.ai" as shown in .pcap file . DNS resolves domain names to ip address
-  
-  DNS response for
-      thehackernews.com : 103.153.93.230
-      youtube.com :  103.153.93.230 etc
-       the destination ip of every website look same because they maybe use same cloud provider or CDN(content delivery network. They use anycast ip for their services
-
-2.ARP (address resolution protocol)
-
-    A device (netlinkict) proactively announces its IP-to-MAC mapping to the local network.IP conflict detection ("Is anyone else using my IP?"). Arp protocol repeating after specific time that the ip is belong to this device .
-
-3.TCP (transmission control protocol)
-  TCP protocol used by HTTP, HTTPS, SSH, FTP, and many others.
-
-    TCP Connection Lifecycle (3-Way Handshake)  
-    SYN (Client → Server)
-        "Let’s connect!"
-        Flags: SYN=1, Seq=X
-        SYN-ACK (Server → Client)
-        "Acknowledged! Here’s my number."
-        Flags: SYN=1, ACK=1, Seq=Y, Ack=X+1
-        ACK (Client → Server)
-        "Got it! Let’s talk."
-        Flags: ACK=1, Seq=X+1, Ack=Y+1
-
-  
-    TCP Connection Termination (4-Way Handshake)
-        FIN (Client → Server): "I’m done sending."
-        Flags: FIN=1, ACK=1
-        ACK (Server → Client): "Got your FIN."
-        FIN (Server → Client): "I’m also done."
-        ACK (Client → Server): "Confirmed, connection closed."
-      I often see a issue name "Retransmission" it means "Same packet sent multiple times (high latency/loss)."
-
-4.QUIC  (Quick UDP Internet Connections)
-
-  QUIC is a modern transport protocol developed by Google, designed to improve web performance by reducing latency. It runs over UDP (not TCP) and is heavily used by Chrome, YouTube, and other Google services. Here's how to analyze it in Wireshark.
-
+Download wireshark in wirshark.org
+open wireshark and open some website in browser
+wireshark capture the data incoming and outgoing for analyzis
+identify some protocols
 
